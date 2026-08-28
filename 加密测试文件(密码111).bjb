@@ -1,0 +1,72 @@
+
+=== DVT_RFSA 加密算法 ===
+版本: 3.0
+模式: AES+X25519 混合加密
+开发者: VSD Security Team
+日期: 2026-06-01 17:18:32
+
+=== 安全信息 ===
+加密强度: 极高
+破解概率: 接近于零 (使用量子计算机前)
+算法组合: 
+  - AES+RSA模式: RSA-4096 + AES-256-GCM
+  - AES+X25519模式: X25519密钥交换 + AES-256-GCM
+  - AES+RSA+密码模式: RSA-4096 + AES-256-GCM + 用户密码二次加密
+密钥熵: ≥256位 (高强度模式)
+密码保护: 是 (双层加密)
+哈希状态: 已嵌入加密数据（自动计算）
+
+=== 哈希校验 ===
+完整性保护: SHA-256 哈希校验
+校验方式: 解密后自动验证原始数据完整性
+防篡改: 哈希值嵌入加密数据结构
+
+=== X25519 识别信息 ===
+X25519曲线: Curve25519
+密钥交换: ECDH over Curve25519
+共享密钥派生: HKDF-SHA256
+前向安全性: 支持（临时密钥对）
+
+=== 免责声明 ===
+1. 使用低强度密码可能导致数据泄露
+2. 请妥善保管您的密钥和密码
+3. 开发者不对因密码强度不足导致的数据泄露负责
+4. 哈希校验仅用于完整性验证，不替代数字签名
+
+=== DVT_RFSA Encryption Algorithm ===
+Version: 3.0
+Mode: AES+X25519 混合加密
+Developer: VSD Security Team
+Date: 2026-06-01 17:18:32
+
+=== Security Information ===
+Encryption Strength: Extremely High
+Cracking Probability: Near Zero (pre-quantum)
+Algorithm Combination:
+  - AES+RSA Mode: RSA-4096 + AES-256-GCM
+  - AES+X25519 Mode: X25519 Key Exchange + AES-256-GCM
+  - AES+RSA+Password Mode: RSA-4096 + AES-256-GCM + User Password Double Encryption
+Key Entropy: ≥256 bits (high strength mode)
+Password Protection: Yes (Double Layer)
+Hash Status: 已嵌入加密数据（自动计算）
+
+=== Hash Verification ===
+Integrity Protection: SHA-256 Hash Verification
+Verification Method: Automatic verification after decryption
+Tamper Resistance: Hash embedded in encrypted data structure
+
+=== X25519 Identification ===
+X25519 Curve: Curve25519
+Key Exchange: ECDH over Curve25519
+Shared Secret Derivation: HKDF-SHA256
+Forward Secrecy: Supported (ephemeral key pair)
+
+=== Disclaimer ===
+1. Using weak passwords may lead to data breaches
+2. Please keep your keys and passwords secure
+3. The developer is not responsible for data breaches caused by weak passwords
+4. Hash verification only ensures integrity, not a substitute for digital signatures
+
+=== 数据开始 ===
+{"has_password": true, "mode": "aes_x25519_password_protected", "pwd_salt": "c51fde00c4e2bb746f36dc68075b8573", "pwd_iv": "221b66b212a8b8bf797dc4f6", "pwd_tag": "a74c4e30268a9edc6f195bd1fa1bb16d", "encrypted_payload": "d7c0ef7ad760ea2082de428d1bc4d70fdeaeb29bd4d6515d0da7699386d4cc33eef6429fe6b83885ce72b3e8bd2bf3adcf1b304825ff659548fd213c7fd6a9365e421d857f99b300c458387071116d4cd2e8b380ff5695735fe6d135f7e0b9a19c443376928d58c4e061550bc1feb42d677411ba4c324ad6b848302c2e48c60306a1755a687c1c774804b3d7661cb5c8e9aff29081c0ec4fc10327afd956c3334241e86789a6ba8c33c3310de9400cc56162494d57ea95709bd68f0806b786dbd928055ca885857a005736a9f74a3d8dae8a0cb609260996464ca0b3198a5b9e6930121e91500c7c8a9aa94852ca654a17e4c0e8923059ac80ea3eefcc2fa893948dab9a86e296f19d34847b7838b656d4768784ece76116275bfd526a9ae3b4d4b854cd659449d09d9d4b82c34ceb33cec735d22dbf2ff7a13ab4ff26a839d77c6390fff7c417285839a61ddea56ca6bb00edbdc3a9b21aa8d5b0dab8aee6ba6e3f238025e99a420bd880f59eb0816213b5feec4c64390a6aa19aff9caa1e7d2ae33348aa8849bf6a2b331b8d1cf75f608b4eb4ff176997781d58bd72b75dcafe8b44fb0407b2c48e54a3ce7720f0325957a92fe05cebcef4c4176dd46c7b8a5bdbd112b87af88f3b31010a6155f26a0a2ecc53eac6a4c1ab1fd0005dea5243b12e68cd94b99df2e7964870ef96d36ec8f93b", "timestamp": "2026-06-01T09:18:32.467264", "single_key": true}
+=== 数据结束 ===
